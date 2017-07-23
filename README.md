@@ -57,6 +57,10 @@ bean:
   farm: Some Farm
   lot: A
   varietal: (optional)
+  vendor: Sweet Marias
+  vendor_url: https://www.sweetmarias.com (optional)
+  bean_url: https://www.sweetmarias.com/product/ethiopia-yirgacheffe-example-bean (optional)
+  vendor_description: "Boy is it coffee" (optional)
 ```
 
 #### weight: (`object`) [required]
@@ -65,10 +69,18 @@ The pre and post roast weight of the beans expressed in a float, combined with u
 
 #### environment (`object`) [optional]
 
-Ambient temperature of roasting environment expressed in a float combined with the unit of temperature.
-Ambient humidity of roasting environment expressed in a float combined with the unit of humidity.
-Ambient pressure of roasting environment expressed in a float combined with the unit of pressure.
+```toml
+Ambient temperature, humdity, and barometric pressure of roasting environment
+expressed in a float.
 
+todo:
+Units will be standardized and defined globally.
+
+[environment]
+	temperature = 68.0
+	humidity    = 40.0
+	pressure    = 101.3
+```
 #### events: (`array<event>`) [optional]
 
 #### notes: (`string`) [optional]
