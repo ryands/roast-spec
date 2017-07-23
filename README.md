@@ -50,7 +50,13 @@ Total time of roasting.
 
 The bean being roasted.  ex: Ethiopia Yirgacheffe Super Cool Farm Lot B
 
-####  events: (`array<event>`) [optional]
+#### environment (`object`) [optional]
+
+Ambient temperature of roasting environment expressed in a float combined with the unit of temperature.
+Ambient humidity of roasting environment expressed in a float combined with the unit of humidity.
+Ambient pressure of roasting environment expressed in a float combined with the unit of pressure.
+
+#### events: (`array<event>`) [optional]
 
 #### notes: (`string`) [optional]
 
