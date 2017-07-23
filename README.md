@@ -31,6 +31,23 @@ need to have a "2.1" in the event that a popular version that is not the latest 
 
 Every roast must have a date provided.  Date format is expected to be in ISO 8601 format. Precision to minutes.
 
+#### units: (`object`) [required]
+
+SI or imperial, then the units in that system.
+
+I feel like this could be cleaner...
+
+```toml
+[units]
+	unit_type   = SI
+		[units.SI]
+		temperature = celcius
+		pressure    = kPa
+		humidity    = relative_percentage
+		weight      = gram (this is technically a mass unit, but we're on earth so we're safe to assume)
+```
+
+
 #### roaster: (`object`) [optional]
 
 TODO: Document.
