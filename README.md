@@ -69,13 +69,14 @@ The pre and post roast weight of the beans expressed in a float, combined with u
 
 #### environment (`object`) [optional]
 
-```toml
 Ambient temperature, humdity, and barometric pressure of roasting environment
 expressed in a float.
 
 todo:
 Units will be standardized and defined globally.
 
+
+```toml
 [environment]
 	temperature = 68.0
 	humidity    = 40.0
