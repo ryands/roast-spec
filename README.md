@@ -16,7 +16,7 @@ Note: in future revisions this may be moved to another file, possibly [SPECIFICA
 ### File type and format
 
 This specification is intended to be used with any file format that can be serialized into a hash.  It is recommended that the
-format support arrays, strings, integers/numbers.  Examples and discussion will focus on yaml and json formats.
+format support arrays, strings, integers/numbers.  Examples and discussion will focus on yaml, json, and toml formats.
 
 ### The file
 
