@@ -39,12 +39,12 @@ I feel like this could be cleaner...
 
 ```toml
 [units]
-	unit_type   = SI
+	unit_type   = "SI"
 		[units.SI]
-		temperature = celcius
-		pressure    = kPa
-		humidity    = relative_percentage
-		weight      = gram (this is technically a mass unit, but we're on earth so we're safe to assume)
+		temperature = "celcius"
+		pressure    = "kPa"
+		humidity    = "relative_percentage"
+		weight      = "gram" (this is technically a mass unit, but we're on earth so we're safe to assume)
 ```
 
 
