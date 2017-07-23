@@ -46,9 +46,18 @@ roaster:
 
 Total time of roasting.
 
-#### bean: (`string`) [required]
+#### bean: (`object`) [required]
 
-The bean being roasted.  ex: Ethiopia Yirgacheffe Super Cool Farm Lot B
+The bean being roasted.
+
+```yaml
+bean:
+  country: Ethiopia
+  region: Yirgacheffe
+  farm: Some Farm
+  lot: A
+  varietal: (optional)
+```
 
 #### weight: (`object`) [required]
 
