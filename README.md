@@ -1,7 +1,7 @@
 # roast-spec
 Specification for logging and publishing coffee roasts
 
-**Current Version:** 0
+**Current Version:** 0 (initial draft is a work-in-progress)
 
 ## Summary
 
