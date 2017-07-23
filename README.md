@@ -29,7 +29,7 @@ need to have a "2.1" in the event that a popular version that is not the latest 
 
 #### date: (`string`) [required]
 
-Every roast must have a date provided.  Date format is expected to be YYYY-MM-DD (ex: 2017-07-22).
+Every roast must have a date provided.  Date format is expected to be in ISO 8601 format. Precision to minutes.
 
 #### roaster: (`object`) [optional]
 
@@ -50,6 +50,10 @@ Total time of roasting.
 
 The bean being roasted.  ex: Ethiopia Yirgacheffe Super Cool Farm Lot B
 
+#### weight: (`object`) [required]
+
+The pre and post roast weight of the beans expressed in a float, combined with units.
+
 #### environment (`object`) [optional]
 
 Ambient temperature of roasting environment expressed in a float combined with the unit of temperature.
@@ -61,6 +65,4 @@ Ambient pressure of roasting environment expressed in a float combined with the 
 #### notes: (`string`) [optional]
 
 Any notes or commentary on the roast.
-
-
 
