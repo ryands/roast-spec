@@ -16,7 +16,7 @@ Note: in future revisions this may be moved to another file, possibly [SPECIFICA
 ### File type and format
 
 This specification is intended to be used with any file format that can be serialized into a hash.  It is recommended that the
-format support arrays, strings, integers/numbers.  Examples and discussion will focus on yaml and json formats.
+format support arrays, strings, integers/numbers.  Examples and discussion will focus on yaml, json, and toml formats.
 
 ### The file
 
@@ -29,7 +29,24 @@ need to have a "2.1" in the event that a popular version that is not the latest 
 
 #### date: (`string`) [required]
 
-Every roast must have a date provided.  Date format is expected to be YYYY-MM-DD (ex: 2017-07-22).
+Every roast must have a date provided.  Date format is expected to be in ISO 8601 format. Precision to minutes.
+
+#### units: (`object`) [required]
+
+SI or imperial, then the units in that system.
+
+I feel like this could be cleaner...
+
+```toml
+[units]
+	unit_type   = "SI"
+		[units.SI]
+		temperature = "celcius"
+		pressure    = "kPa"
+		humidity    = "relative_percentage"
+		weight      = "gram" (this is technically a mass unit, but we're on earth so we're safe to assume)
+```
+
 
 #### roaster: (`object`) [optional]
 
@@ -46,15 +63,45 @@ roaster:
 
 Total time of roasting.
 
-#### bean: (`string`) [required]
+#### bean: (`object`) [required]
 
-The bean being roasted.  ex: Ethiopia Yirgacheffe Super Cool Farm Lot B
+The bean being roasted.
 
-####  events: (`array<event>`) [optional]
+```yaml
+bean:
+  country: Ethiopia
+  region: Yirgacheffe
+  farm: Some Farm
+  lot: A
+  varietal: (optional)
+  vendor: Sweet Marias
+  vendor_url: https://www.sweetmarias.com (optional)
+  bean_url: https://www.sweetmarias.com/product/ethiopia-yirgacheffe-example-bean (optional)
+  vendor_description: "Boy is it coffee" (optional)
+```
+
+#### weight: (`object`) [required]
+
+The pre and post roast weight of the beans expressed in a float, combined with units.
+
+#### environment (`object`) [optional]
+
+Ambient temperature, humdity, and barometric pressure of roasting environment
+expressed in a float.
+
+todo:
+Units will be standardized and defined globally.
+
+
+```toml
+[environment]
+	temperature = 68.0
+	humidity    = 40.0
+	pressure    = 101.3
+```
+#### events: (`array<event>`) [optional]
 
 #### notes: (`string`) [optional]
 
 Any notes or commentary on the roast.
-
-
 
