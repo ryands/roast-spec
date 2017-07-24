@@ -35,7 +35,9 @@ Every roast must have a date provided.  Date format is expected to be in ISO 860
 
 SI or imperial, then the units in that system.
 
-I feel like this could be cleaner...
+I feel like this could be cleaner... 
+
+Technically grams are a mass unit, but we're on earth so we're safe to assume some things.
 
 ```toml
 [units]
@@ -44,9 +46,8 @@ I feel like this could be cleaner...
 		temperature = "celcius"
 		pressure    = "kPa"
 		humidity    = "relative_percentage"
-		weight      = "gram" (this is technically a mass unit, but we're on earth so we're safe to assume)
+		weight      = "gram"
 ```
-
 
 #### roaster: (`object`) [optional]
 
@@ -61,7 +62,7 @@ roaster:
 
 #### duration: (`string`) [optional]
 
-Total time of roasting.
+Total time of roasting expressed in seconds.
 
 #### bean: (`object`) [required]
 
@@ -82,14 +83,17 @@ bean:
 
 #### weight: (`object`) [required]
 
-The pre and post roast weight of the beans expressed in a float, combined with units.
+The pre and post roast weight of the beans expressed in floats. Units defined globally.
 
+```json
+{"pre-roast":"227.0", "post-roast":"200.0"}
+```
 #### environment (`object`) [optional]
 
 Ambient temperature, humdity, and barometric pressure of roasting environment
-expressed in a float.
+expressed in floats.
 
-todo:
+TODO:
 Units will be standardized and defined globally.
 
 
