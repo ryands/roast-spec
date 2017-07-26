@@ -86,7 +86,7 @@ The bean being roasted.
 The pre and post roast weight of the beans expressed in floats. Units defined globally.
 
 ```toml
-[weights]
+[weight]
 	pre-roast  = "227.0"
 	post-roast = "200.0"
 ```
