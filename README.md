@@ -16,11 +16,11 @@ Note: in future revisions this may be moved to another file, possibly [SPECIFICA
 ### File type and format
 
 This specification is intended to be used with any file format that can be serialized into a hash.  It is recommended that the
-format support arrays, strings, integers/numbers.  Examples and discussion will focus on yaml, json, and toml formats.
+format support arrays, strings, integers/numbers.  Examples and discussion will focus on toml, but json and yaml will also be supported.
 
 ### The file
 
-`example.yml`: An example roast
+`example.toml`: An example roast
 
 #### version: (`string`) [required]
 
@@ -53,11 +53,11 @@ Technically grams are a mass unit, but we're on earth so we're safe to assume so
 
 TODO: Document.
 
-```yaml
-roaster:
-  type: Behmor 1600+
-  timer: 20:30
-  parameters: P1, A
+```toml
+[roaster]
+	type       = "Behmor 1600+"
+	timer      = "20:30"
+	parameters = ["P1", "A"]
 ```
 
 #### duration: (`string`) [optional]
@@ -68,17 +68,17 @@ Total time of roasting expressed in seconds.
 
 The bean being roasted.
 
-```yaml
-bean:
-  country: Ethiopia
-  region: Yirgacheffe
-  farm: Some Farm
-  lot: A
-  varietal: (optional)
-  vendor: Sweet Marias
-  vendor_url: https://www.sweetmarias.com (optional)
-  bean_url: https://www.sweetmarias.com/product/ethiopia-yirgacheffe-example-bean (optional)
-  vendor_description: "Boy is it coffee" (optional)
+```toml
+[bean]
+	country            = "Ethiopia"
+	region             = "Yirgacheffe"
+	farm               = "Some Farm"
+	lot                = "A"
+	varietal           = "(optional)"
+	vendor             = "Sweet Marias"
+	vendor_url         = "https://www.sweetmarias.com (optional)"
+	bean_url           = "https://www.sweetmarias.com/product/ethiopia-yirgacheffe-example-bean (optional)"
+	vendor_description = "Boy is it coffee (optional)"
 ```
 
 #### weight: (`object`) [required]
