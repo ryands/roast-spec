@@ -56,7 +56,7 @@ TODO: Document.
 [roaster]
 	type       = "Behmor 1600+"
 	timer      = "20:30"
-	parameters = ["P1", "A"]
+	parameters = "P1, A"
 ```
 
 #### duration: (`string`) [optional]
