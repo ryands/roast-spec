@@ -64,6 +64,14 @@ TODO: Document.
 
 Total time of roasting expressed in seconds.
 
+#### time_to_first_crack: (`string`) [optional]
+
+Time until first crack achieved expressed in seconds.
+
+#### time_to_second_crack: (`string`) [optional]
+
+Time until second crack achieved expressed in seconds.
+
 #### bean: (`object`) [required]
 
 The bean being roasted.
